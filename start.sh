@@ -1,1 +1,0 @@
-SONOS_IP=10.6.2.4 npm run dev
