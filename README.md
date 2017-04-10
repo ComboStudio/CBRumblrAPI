@@ -8,9 +8,9 @@ Welcome to the Rumblr API repo! If you've just stumbled across this repo, it mig
 
 ## Things to note
 
-* Due to the limitations of the Sonos API, you'll need to make sure you're running the server on the same network that your Sonos system is connected to. Setting this up on a Raspberry Pi would be a pretty sweet and discreet way of doing this - but if you're lazy, you can just run this from any computer that has Node installed and is connected to the Sonos' network. Works just fine.
+* **The server needs to be running on the same network as the client device AND the Sonos for this to work!** Yeah, it's far from ideal, but the Sonos bits require a bit of tunnel-y magic I haven't got round to trying yet. Would love to see any implementation of this, however!
 
-* This doesn't support multiple Sonos systems particularly well. The way the script's written is simply to pick whichever the first Sonos the system comes across and use that (simply because we've only got one in our studio...!). If you have a Sonos IP you'd like to specifically connect to, you can set the environment variable SONOS_IP to the IP of the system. 
+* This doesn't support multiple Sonos systems particularly well. The way the script's written is simply to pick whichever the first Sonos the system comes across and use that (simpy because we've only got one in our studio...!). If you have a Sonos IP you'd like to specifically connect to, you can set the environment variable SONOS_IP to the IP of the system and override. **Note: Make sure it's a valid IP, otherwise the connection will hang.**
 
 * The server logic itself is written in ES6 in the /lib folder. When *npm run build* is run, it'll run babel and compile the code to /build.
 
@@ -24,13 +24,13 @@ Easy as pie - just download, open Terminal, navigate to the folder and run the f
 
 	npm run prod
 
-Now, if you're setting up the full experience, [head over here]: https://github.com/ComboStudio/CBRumblr and finish the rest of the setup for iOS!
+**Note:** If you're setting up the full experience, **[head over here](https://github.com/ComboStudio/CBRumblr)** and finish the rest of the setup for iOS!
 
 ## People who did this
 
-We're a [tiny product studio called Combo]: https://www.combostudio.co from London who love making gnarly digital products just like this (or alternatively, absolutely nothing like this). 
+We're a [tiny product studio called Combo](https://www.combostudio.co) from London who love making gnarly digital products just like this (or alternatively, absolutely nothing like this). 
 
-Interested in working with us? Sweet, our mailboxes are wide open. Drop us a line on [sam@combostudio.co]: mailto:sam@combostudio.co.
+Interested in working with us? Sweet, our mailboxes are wide open. Drop us a line on [sam@combostudio.co](mailto:sam@combostudio.co).
 
 ## License
 

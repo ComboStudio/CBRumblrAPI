@@ -24,7 +24,7 @@ var router = _express2.default.Router();
 
 // Routes
 
-router.post('/play/:trackId', function (req, res) {
+router.post('/play/:trackId', _sonos.sonosFetchActiveSonosMiddleware, function (req, res) {
 
 	(0, _sonos.sonosPlayURI)(req.params.trackId).then(function (json) {
 
