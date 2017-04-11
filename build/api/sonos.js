@@ -236,8 +236,6 @@ var sonosPlayURI = exports.sonosPlayURI = function sonosPlayURI(uri) {
 		throw err;
 	}).catch(function (err) {
 
-		console.log(err);
-
 		return { success: false, error: err.message };
 	});
 };

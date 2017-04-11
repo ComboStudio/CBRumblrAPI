@@ -39,8 +39,6 @@ var spotifySearch = exports.spotifySearch = function spotifySearch(searchQuery) 
 
 		var url = spotifyAPIRoot + "/search?query=" + searchQuery + "&type=track";
 
-		console.log(url);
-
 		return _axios2.default.get(url, {
 
 			responseType: 'json'
